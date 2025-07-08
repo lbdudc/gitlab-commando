@@ -1,0 +1,33 @@
+{
+  "name": "@lbdudc/gitlab-commando",
+  "version": "0.1.0",
+  "description": "Fork of gitlab-commando, a TypeScript library implementing command pattern with undo/redo functionality for interacting with the GitLab API.",
+  "files": [
+    "dist/"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "clean": "rm -rf dist/*",
+    "compile": "tsc",
+    "build": "npm run clean && npm run compile"
+  },
+  "keywords": [
+    "gitlab",
+    "api",
+    "typescript",
+    "command-pattern",
+    "undo-redo",
+    "developer-tools"
+  ],
+  "author": "Alejandro Buján",
+  "license": "MIT",
+  "dependencies": {
+    "stack-typescript": "^1.0.4"
+  },
+  "devDependencies": {
+    "tsc": "^2.0.4",
+    "typescript": "^5.8.3"
+  }
+}

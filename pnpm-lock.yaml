@@ -1,0 +1,18 @@
+lockfileVersion: '6.0'
+
+dependencies:
+  stack-typescript:
+    specifier: ^1.0.4
+    version: 1.0.4
+
+packages:
+
+  /linked-list-typescript@1.0.15:
+    resolution: {integrity: sha512-RIyUu9lnJIyIaMe63O7/aFv/T2v3KsMFuXMBbUQCHX+cgtGro86ETDj5ed0a8gQL2+DFjzYYsgVG4I36/cUwgw==}
+    dev: false
+
+  /stack-typescript@1.0.4:
+    resolution: {integrity: sha512-LAFycOVCWRYP6TDbwXR2XeXTmKjZT+wpdC4GEnBWWYfyTUK7NOassuqVTbUXsEA6CTCgk4FMOkUi+yFS33D1mw==}
+    dependencies:
+      linked-list-typescript: 1.0.15
+    dev: false

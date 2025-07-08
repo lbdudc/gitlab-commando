@@ -1,0 +1,37 @@
+export interface GitLabClient {
+    checkAndMerge(token: string, id: string, mergeRequestIid: string, shouldRemoveSourceBranch: boolean) : Promise<any>;
+    closeMergeRequest(token: string, id: string, mergeRequestIid: string) : Promise<any>;
+    commit(token: string, projectId: string, actions: [], message: string, branch: string) : Promise<any>;
+    createBranch(token: string, projectId: string, branchName: string, ref: string) : Promise<any>;
+    createFile(token: string, id: string, filePath: string, branch: string, content: string) : Promise<any>;
+    createGroup(token: string, name: string, namespaceId: string) : Promise<any>;
+    createMergeRequest(token: string, id: string, title: string, sourceBranch: string, targetBranch: string) : Promise<any>;
+    createOrRenameMergeRequest(token: string, id: string, title: string, sourceBranch: string, targetBranch: string) : Promise<any>;
+    createProject(token: string, name: string, namespaceId: string, topics: string[], branch: string) : Promise<any>;
+    createTag(token: string, projectId: string, tag: string, ref: string) : Promise<any>;
+    deleteBranch(token: string, projectId: string, branchName: string) : Promise<any>;
+    deleteGroup(token: string, id: string) : Promise<any>;
+    deleteMergeRequest(token: string, id: string, mergeRequestIid: string) : Promise<any>;
+    deleteProject(token: string, id: string) : Promise<any>;
+    deleteTag(token: string, projectId: string, tag: string) : Promise<any>;
+    downloadRepository(token: string, id: string, ref: string) : Promise<any>;
+    getFile(token: string, id: string, filePath: string, branch: string) : Promise<any>;
+    getGroup(token: string, id: string) : Promise<any>;
+    getGroupMembers(token: string, id: string, perPage: number) : Promise<any>;
+    getMergeRequest(token: string, id: string, mergeRequestIid: string) : Promise<any>;
+    getMergeRequestsByBranches(token: string, id: string, sourceBranch: string, targetBranch: string, state: string) : Promise<any>;
+    getProject(token: string, id: string) : Promise<any>;
+    getProjectMembers(token: string, id: string, perPage: number) : Promise<any>;
+    getProjects(token: string, topics: string) : Promise<any>;
+    getUserData(token: string) : Promise<any>;
+    mergeMergeRequest(token: string, id: string, mergeRequestIid: string, shouldRemoveSourceBranch: boolean, json: boolean) : Promise<any>;
+    refreshAccessToken(refreshToken: string, clientId: string, clientSecret: string, redirectUri: string) : Promise<any>;
+    renameGroup(token: string, id: string, name: string) : Promise<any>;
+    renameMergeRequest(token: string, id: string, mergeRequestIid: string, title: string) : Promise<any>;
+    renameProject(token: string, id: string, name: string) : Promise<any>;
+    reopenMergeRequest(token: string, id: string, mergeRequestIid: string) : Promise<any>;
+    requestAccessToken(code: string, clientId: string, clientSecret: string, redirectUri: string) : Promise<any>;
+    revertCommit(token: string, projectId: string, sha: string, branch: string) : Promise<any>;
+    saveFile(token: string, id: string, filePath: string, branch: string, content: string) : Promise<any>;
+    setDefaultBranch(token: string, id: string, branch: string) : Promise<any>;
+}
