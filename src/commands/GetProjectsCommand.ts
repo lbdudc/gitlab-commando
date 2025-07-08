@@ -1,8 +1,9 @@
 import { Command } from "./Command.js";
 
 export class GetProjectsCommand extends Command {
-    constructor(url: string, token: string, topics: string) {
-        super(url, 'GET', `projects?topics=${topics}`, token);
-    }
+  constructor(url: string, token: string, id: string, page?: number) {
+    const query = page !== undefined ? `?page=${page.toString()}` : '';
+    super(url, 'GET', `projects/${id}${query}`, token);
+  }
 }
 
