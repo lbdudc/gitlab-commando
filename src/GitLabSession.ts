@@ -165,8 +165,8 @@ export class GitLabSession implements CommandSession, GitLabClient {
         return await this.executeCommand(new GetProjectMembersCommand(this.url, token, id, perPage));
     }
     
-    public async getProjects(token: string, topics: string, page?: number): Promise<any> {
-        return await this.executeCommand(new GetProjectsCommand(this.url, token, topics, page));
+    public async getProjects(token: string, topic: string, page?: number): Promise<any> {
+        return await this.executeCommand(new GetProjectsCommand(this.url, token, topic, page));
     }
 
     public async getUserData(token: string): Promise<any> {
