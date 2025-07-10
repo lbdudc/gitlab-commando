@@ -1,6 +1,6 @@
 {
   "name": "@lbdudc/gitlab-commando",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Fork of gitlab-commando, a TypeScript library implementing command pattern with undo/redo functionality for interacting with the GitLab API.",
   "files": [
     "dist/"
